@@ -1,0 +1,93 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1400px
+) !default;
+
+html.dark {
+  @import './variables/darkBootstrapVars';
+  @import '../../node_modules/bootstrap/scss/bootstrap';
+  // fix for slider not appearing in darkmode
+  .vue-slider{
+    box-sizing: content-box;
+  }
+
+}
+html {
+  @import '../../node_modules/bootstrap/scss/bootstrap';
+}
+
+@font-face {
+  font-family: 'Helvetica Rounded LT';
+  src: url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.eot');
+  src: url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.svg#Helvetica Rounded LT')
+      format('svg');
+}
+
+#render-zone {
+  height: 380px;
+  width: 1200px;
+  svg {
+    overflow: initial;
+  }
+}
+.keycap {
+  transform: scale(0.1);
+  text.cap-size {
+    display: none;
+  }
+  &:hover {
+    text.cap-size {
+      display: initial;
+    }
+  }
+}
+.key-shadow {
+  fill-opacity: 0.78;
+}
+.key-content {
+  font-family: 'Helvetica Rounded LT';
+  font-weight: bold;
+  cursor: default;
+}
+.render-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+  margin: 10px 0 20px 0;
+}
+
+.keycap.U2V {
+  text {
+    writing-mode: tb; /* SVG 1 syntax */
+    glyph-orientation-vertical: 0;
+    writing-mode: vertical-rl; /* CSS3 syntax */
+    text-orientation: upright;
+    text-anchor: middle;
+  }
+}
+.container-1U {
+  max-width: 70px;
+  min-width: 70px;
+  margin-top: -3px;
+  margin-right: 2px;
+  display: inline-block;
+}
+#search-results {
+  tbody {
+    tr {
+      cursor: pointer;
+    }
+  }
+}
